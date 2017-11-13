@@ -1,0 +1,24 @@
+[
+  { "type": "left",  "text": "Hi! 👋 Nice to see you! \nСould you do me a favor, please, DON’T PUSH the \"NEXT\" button below!" },
+
+  { "type": "right", "text": "⁉️ \nBut why? What would happen?" },
+
+  { "type": "left",  "text": "Wait.. someone is knocking on my door." },
+  { "type": "left",  "text": "Sorry. What did you ask?" },
+
+  { "type": "right", "text": "Are you kidding me? I asked what would happen if I push the NEXT button?" },
+
+  { "type": "left",  "text": "Oh, this... believe me, you'd better not know." },
+
+  { "type": "right", "text": "Oh, come on! Tell me!" },
+
+  { "type": "left",  "text": "I’m not sure, if I can really trust you. This secret is quite personal. U see?" },
+
+  { "type": "right", "text": "I swear, you can trust me! I won't tell anyone!" },
+
+  { "type": "left",  "text": "Does anyone around you can read this?" },
+
+  { "type": "right", "text": "No, I am alone.." },
+
+  { "type": "left",  "text": "Ok then...\n We live in a digital world that was created a quarter century ago. And now it has changed and I can no longer keep this in secret, because it becomes dangerous." }
+]

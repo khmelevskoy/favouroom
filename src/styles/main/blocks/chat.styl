@@ -1,0 +1,18 @@
+.b-chat {
+  display: flex;
+  flex-direction: column;
+
+  .b-message {
+    + .b-message {
+      margin-top: 20px;
+    }
+  }
+
+  .b-message__right {
+    align-self: flex-end;
+  }
+
+  .b-message__left {
+    align-self: flex-start;
+  }
+}

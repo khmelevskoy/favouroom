@@ -1,0 +1,29 @@
+.b-btn-next {
+  background: $color-blue;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  +breakpoint(mobile) {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+  }
+
+  +breakpoint(desktop) {
+    height: 90px;
+    line-height: 90px;
+    font-size: 40px;
+  }
+
+  &.is-disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: darken($color-blue, 3%)
+  }
+}

@@ -9,19 +9,23 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname + 'public'),
+    path: path.resolve(__dirname + '/public'),
     filename: '[name].bundle.js'
   },
 
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, '/public'),
     compress: true,
     port: 9000
   },
 
   resolve: {
+    alias: {
+      '@styles': path.join(__dirname, 'src/styles'),
+    },
+
     modules: [
-      path.resolve(__dirname, 'src/scripts'),
+      path.join(__dirname, '/src/scripts'),
       'node_modules'
     ]
   },
@@ -36,7 +40,7 @@ module.exports = {
         use: "imports-loader?this=>window,define=>false,require=>false,module=>false,exports=>false"
       },
       {
-        test: /\.js$/,
+        test: /\.js|\.jsx$/,
         exclude: /node_modules/,
         use: 'babel-loader'
       },
@@ -46,7 +50,12 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: { loader: 'style-loader' },
           use: [
-            'raw-loader',
+            {
+              loader: 'raw-loader'
+            },
+            {
+              loader: 'postcss-loader'
+            },
             {
               loader: 'stylus-loader',
               options: {
@@ -60,6 +69,13 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('[name].bundle.css')
+    new ExtractTextPlugin('[name].bundle.css'),
+
+    new webpack.DefinePlugin({
+      'process.env': {
+        // This has effect on the react lib size
+        'NODE_ENV': JSON.stringify('production'),
+      },
+    })
   ]
 };

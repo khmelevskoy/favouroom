@@ -1,0 +1,26 @@
+.b-finish {
+  text-align: center;
+  font-weight: 600;
+
+  +breakpoint(desktop) {
+    font-size: 24px;
+    line-height: 35px;
+    max-width: 600px;
+    margin: 60px auto 0;
+
+    p + p {
+      margin-top: 25px;
+    }
+  }
+
+  +breakpoint(mobile) {
+    font-size: 18px;
+    line-height: 25px;
+    width: 85%;
+    margin: 30px auto 0;
+
+    p + p {
+      margin-top: 20px;
+    }
+  }
+}
