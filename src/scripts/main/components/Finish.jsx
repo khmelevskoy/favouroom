@@ -8,7 +8,7 @@ class Finish extends Component {
         It’s more, than on average online store. That's because conversations is the future.
       </p>
 
-      <p>When we finish our Tokensale, the world of e-commerce will be different.</p>
+      <p>When we finish our store, the world of e-commerce will be different. See you then!</p>
     </div>
   }
 }
